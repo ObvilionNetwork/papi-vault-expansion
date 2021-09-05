@@ -25,13 +25,14 @@ import me.clip.placeholderapi.expansion.Configurable;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class VaultExpansion extends PlaceholderExpansion implements Cacheable, Configurable {
 
-    private final String VERSION = getClass().getPackage().getImplementationVersion();
+    private final String VERSION = "1.12";
     private VaultPermsHook perms;
     private VaultEcoHook eco;
 
@@ -83,12 +84,12 @@ public class VaultExpansion extends PlaceholderExpansion implements Cacheable, C
     }
 
     @Override
-    public String getAuthor() {
+    public @NotNull String getAuthor() {
         return "clip";
     }
 
     @Override
-    public String getIdentifier() {
+    public @NotNull String getIdentifier() {
         return "vault";
     }
 
@@ -98,7 +99,7 @@ public class VaultExpansion extends PlaceholderExpansion implements Cacheable, C
     }
 
     @Override
-    public String getVersion() {
+    public @NotNull String getVersion() {
         return VERSION;
     }
 
